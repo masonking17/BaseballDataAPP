@@ -33,12 +33,17 @@ var maketable = function(dataPromise)
     .append("tr")
     .attr("id", function(d){return d.team_id})
     .text(function(d){return d.team_id})
-     .on("click", function(d) {displayInfo(d)}) // {console.log(d.abbreviation) 
-    // d3.select("#"+ d.teamID)
+     .on("click", function(d) 
+{
+        
+        displayInfo(d)
+          
+}) 
 
 }
 var displayInfo = function(info)
 {
+   
     var box= 
     d3.select("#teamInfo");
     
@@ -62,7 +67,8 @@ var displayInfo = function(info)
     
      box.append("p")
     .text("State: " + info.state)
+    
+     clearInfo("#teamInfo")
 
 }
           
-
